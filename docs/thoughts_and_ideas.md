@@ -6,3 +6,5 @@
 ### Start using PyCharm for Django projects:
 - Think about licensing 
 - Vagrant and virtualenv integration
+
+### Create a separate repository for study notes
