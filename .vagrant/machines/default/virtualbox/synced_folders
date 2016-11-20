@@ -1,0 +1,1 @@
+{"virtualbox":{"/home/vagrant/devs":{"guestpath":"/home/vagrant/devs","hostpath":"C:/Users/Sergejs/devs","disabled":false,"__vagrantfile":true},"/vagrant":{"guestpath":"/vagrant","hostpath":"C:/Users/Sergejs/devs/tango-with-django","disabled":false,"__vagrantfile":true}}}
