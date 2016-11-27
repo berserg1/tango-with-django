@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+{% load staticfiles %}
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>About Rango</title>
+  </head>
+  <body>
+    <div>
+      <p>
+        {{ textblock }}
+      </p>
+    </div>
+    <div>
+      <img src="/media/cat.jpg" alt="Cat picture" />
+    </div>
+    <div>
+      <a href="/rango/">Index</a> <br />
+      <img src="{% static "images/rango.jpg" %}" alt="Picture of Rango" />
+    </div>
+  </body>
+</html>
