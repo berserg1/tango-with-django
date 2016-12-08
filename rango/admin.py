@@ -3,7 +3,7 @@ from rango.models import Category, Page
 
 
 class PageAdmin(admin.ModelAdmin):
-    list_display = ['title', 'category', 'url']
+    list_display = ['title', 'category', 'views', 'url']
     search_fields = ['title']
     list_filter = ['views']
 
@@ -16,6 +16,7 @@ class PageInline(admin.TabularInline):
 class CategoryAdmin(admin.ModelAdmin):
     list_display = ['name', 'views', 'likes']
     list_filter = ['views', 'likes']
+    prepopulated_fields = {'slug': ('name',)}
 
     inlines = [PageInline]
 

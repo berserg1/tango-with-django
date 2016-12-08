@@ -1,3 +1,4 @@
+import random
 import os
 os.environ.setdefault('DJANGO_SETTINGS_MODULE',
                       'tango_rango.settings')
@@ -67,7 +68,7 @@ def populate():
 def add_page(cat, title, url, views=0):
     p = Page.objects.get_or_create(category=cat, title=title)[0]
     p.url = url
-    p.views = views
+    p.views = random.randint(1, 200)
     p.save()
     return p
 
