@@ -22,7 +22,7 @@ def populate():
             "url": "http://www.greenteapress.com/thinkpython/"},
         {"title": "Learn Python in 10 Minutes",
             "url": "http://www.korokithakis.net/tutorials/python/"}
-            ]
+    ]
 
     django_pages = [
         {"title": "Official Django Tutorial",
@@ -31,20 +31,20 @@ def populate():
             "url": "http://www.djangorocks.com/"},
         {"title": "How to Tango with Django",
             "url": "http://www.tangowithdjango.com/"}
-            ]
+    ]
 
     other_pages = [
         {"title": "Bottle",
             "url": "http://bottlepy.org/docs/dev/"},
         {"title": "Flask",
             "url": "http://flask.pocoo.org"}
-        ]
+    ]
 
     cats = {
         "Python": {"pages": python_pages},
         "Django": {"pages": django_pages},
         "Other Frameworks": {"pages": other_pages}
-        }
+    }
 
     # If you want to add more catergories or pages,
     # add them to the dictionaries above.
@@ -89,6 +89,7 @@ def add_cat(name):
 
     c.save()
     return c
+
 
 # Start execution here!
 if __name__ == '__main__':
