@@ -4,7 +4,7 @@ from rango.models import Category, Page
 from rango.forms import CategoryForm
 
 
-def index(reqest):
+def index(request):
     # Query the database for a list of ALL categories currently stored.
     # Order the categories by no. likes in descending order.
     # Retrieve the top 5 only - or all if less than 5.
@@ -18,17 +18,17 @@ def index(reqest):
     # Return a rendered response to send to the client.
     # We make use of the shortcut function to make our lives easier
     # Note that the first parameter is the template we wish to use.
-    return render(reqest, 'rango/index.html', context=context_dict)
+    return render(request, 'rango/index.html', context=context_dict)
 
 
-def about(reqest):
+def about(request):
     context_dict = {'textblock':
                     "This tutorial has been put together by Sergey."}
 
-    return render(reqest, 'rango/about.html', context=context_dict)
+    return render(request, 'rango/about.html', context=context_dict)
 
 
-def show_category(reqest, category_name_slug):
+def show_category(request, category_name_slug):
     # Create a context dictionary which we can pass
     # to the template rendering engine
     context_dict = {}
@@ -59,7 +59,7 @@ def show_category(reqest, category_name_slug):
         context_dict['pages'] = None
 
     # Go render the response and return it to the client.
-    return render(reqest, 'rango/category.html', context_dict)
+    return render(request, 'rango/category.html', context_dict)
 
 
 def add_category(request):
